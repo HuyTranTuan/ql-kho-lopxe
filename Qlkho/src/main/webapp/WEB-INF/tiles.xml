@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+ 
+<tiles-definitions>  
+	<!-- ==================== HOME TEST ====================== -->
+	<!-- Base Definition -->
+	<definition name="homeLayout"
+       template="/WEB-INF/views/home/layouts/homeLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="navbar" value="/WEB-INF/views/home/layouts/navbar.jsp" />  
+       <put-attribute name="footer" value="/WEB-INF/views/home/layouts/footer.jsp" />  
+       <put-attribute name="body" value="" /> 
+       <put-list-attribute name="scripts" />
+       <put-list-attribute name="styles" /> 
+   </definition>
+   
+   <!-- Home Page Test -->
+   <definition name="homeIndex" extends="homeLayout">  
+       <put-attribute name="title" value="Trang chủ thử nghiệm" />  
+       <put-attribute name="body" value="/WEB-INF/views/home/index.jsp" />  
+       <put-list-attribute name="styles" inherit="true">
+       		<add-attribute value="/assets/css/home.css"/>
+       </put-list-attribute>
+   </definition> 
+	
+	<!-- ====================       ====================== --> <!-- ====================       ====================== -->
+	<!-- ====================       ====================== --> <!-- ====================       ====================== -->
+	<!-- ==================== ADMIN ====================== --> <!-- ==================== ADMIN ====================== -->
+	<!-- ====================       ====================== --> <!-- ====================       ====================== -->
+	<!-- ====================       ====================== --> <!-- ====================       ====================== -->
+	
+   <!-- Base Definition -->
+   <definition name="adminLayout"
+       template="/WEB-INF/views/admin/layouts/adminLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="navbar" value="/WEB-INF/views/admin/layouts/navbar.jsp" />  
+       <put-attribute name="sidebar" value="/WEB-INF/views/admin/layouts/sidebar.jsp" />  
+       <put-attribute name="body" value="" />  
+   </definition>  
+   
+   <!-- Admin Home Page  -->
+   <definition name="adminIndex" extends="adminLayout">  
+       <put-attribute name="title" value="Trang chủ" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/index.jsp" />  
+   </definition> 
+   
+   <!-- ============================== Role ============================== -->
+   <!-- List  -->
+   <definition name="adminRole" extends="adminLayout">  
+       <put-attribute name="title" value="Trang quyền" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/quyen/quyen.jsp" />  
+   </definition> 
+   
+   <!-- Add  -->
+   <definition name="adminRoleAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang thêm quyền" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/quyen/quyenAdd.jsp" />  
+   </definition> 
+   
+   <!-- Edit  -->
+   <definition name="adminRoleEdit" extends="adminLayout">  
+       <put-attribute name="title" value="Trang sửa quyền" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/quyen/quyenEdit.jsp" />  
+   </definition>
+   
+   <!-- ============================== Product ============================== -->
+   <!-- List  -->
+   <definition name="adminProduct" extends="adminLayout">  
+       <put-attribute name="title" value="Trang sản phẩm" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/sanpham/sanPham.jsp" />  
+   </definition>
+   
+   <!-- Add  -->
+   <definition name="adminProductAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang thêm sản phẩm" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/sanpham/sanPhamAdd.jsp" />  
+   </definition>
+   
+   <!-- Edit  -->
+	<definition name="adminProductEdit" extends="adminLayout">  
+       <put-attribute name="title" value="Trang thành viên" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/sanpham/sanPhamEdit.jsp" />  
+	</definition>
+    
+    <!-- ============================== User ============================== -->
+	<!-- List  -->
+	<definition name="adminUser" extends="adminLayout">  
+       <put-attribute name="title" value="Trang thành viên" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/thanhvien/thanhVien.jsp" />  
+	</definition>
+	
+	<!-- Add  -->
+	<definition name="adminUserAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang thành viên" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/thanhvien/thanhVienAdd.jsp" />  
+	</definition>
+	
+	<!-- Edit  -->
+	<definition name="adminUserEdit" extends="adminLayout">  
+       <put-attribute name="title" value="Trang thành viên" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/thanhvien/thanhVienEdit.jsp" />  
+	</definition>
+   
+   <!-- ============================== Customer ============================== -->
+   <definition name="adminCustomer" extends="adminLayout">  
+       <put-attribute name="title" value="Trang khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/khachhang/khachHang.jsp" />  
+	</definition>
+	
+	<!-- Add  -->
+	<definition name="adminCustomerAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/khachhang/khachHangAdd.jsp" />  
+	</definition>
+	
+	<!-- Edit  -->
+	<definition name="adminCustomerEdit" extends="adminLayout">  
+       <put-attribute name="title" value="Trang khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/khachhang/khachHangEdit.jsp" />  
+	</definition>
+	
+	<!-- ============================== Supplier ============================== -->
+   <definition name="adminSupplier" extends="adminLayout">  
+       <put-attribute name="title" value="Trang nhà cung cấp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/ncc/ncc.jsp" />  
+	</definition>
+	
+	<!-- Add  -->
+	<definition name="adminSupplierAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang nhà cung cấp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/ncc/nccAdd.jsp" />  
+	</definition>
+	
+	<!-- Edit  -->
+	<definition name="adminSupplierEdit" extends="adminLayout">  
+       <put-attribute name="title" value="Trang nhà cung cấp" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/ncc/nccEdit.jsp" />  
+	</definition>
+   
+   <!-- ============================== Receiving ============================== -->
+   <definition name="adminReceiving" extends="adminLayout">  
+       <put-attribute name="title" value="Trang nhập kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/nhapkho/nhapKho.jsp" />  
+	</definition>
+	
+	<!-- Add  -->
+	<definition name="adminReceivingAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang nhập kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/nhapkho/nhapKhoAdd.jsp" />  
+	</definition>
+   
+   <!-- ============================== Delivery ============================== -->
+   <definition name="adminDelivery" extends="adminLayout">  
+       <put-attribute name="title" value="Trang xuất kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/xuatkho/xuatKho.jsp" />  
+	</definition>
+	
+	<!-- Add  -->
+	<definition name="adminDeliveryAdd" extends="adminLayout">  
+       <put-attribute name="title" value="Trang xuất kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/xuatkho/xuatKhoAdd.jsp" />  
+	</definition>
+   
+   <!-- ============================== Report ============================== -->
+   <definition name="adminReport" extends="adminLayout">  
+       <put-attribute name="title" value="Trang xuất kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/admin/components/baocao/baoCao.jsp" />  
+	</definition>
+   
+   <!-- ============================== Login ============================== -->
+   <definition name="adminLogin">  
+       <put-attribute name="title" value="Trang đăng nhập" />  
+       <put-attribute name="body" value="/WEB-INF/views/auth/login.jsp" />  
+	</definition> 
+   
+	
+  	<!-- ====================      ====================== --> <!-- ====================      ====================== -->
+	<!-- ====================      ====================== --> <!-- ====================      ====================== -->
+	<!-- ==================== USER ====================== --> <!-- ==================== USER ====================== -->
+	<!-- ====================      ====================== --> <!-- ====================      ====================== -->
+	<!-- ====================      ====================== --> <!-- ====================      ====================== -->
+  
+  <!-- Base Definition -->
+   <definition name="userLayout"
+       template="/WEB-INF/views/user/layouts/userLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="navbar" value="/WEB-INF/views/user/layouts/navbar.jsp" />  
+       <put-attribute name="sidebar" value="/WEB-INF/views/user/layouts/sidebar.jsp" />  
+       <put-attribute name="body" value="" />  
+   </definition>  
+   
+   <!-- USER Home Page  -->
+   <definition name="userIndex" extends="userLayout">  
+       <put-attribute name="title" value="Trang chủ" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/index.jsp" />  
+   </definition> 
+   
+   <!-- USER Product Page  -->
+   <definition name="userProduct" extends="userLayout">  
+       <put-attribute name="title" value="Trang sản phẩm" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/sanPham.jsp" />  
+   </definition>
+   
+   <!-- USER Product Add Page  -->
+   <definition name="userProductAdd" extends="userLayout">  
+       <put-attribute name="title" value="Trang sản phẩm" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/sanPhamAdd.jsp" />  
+   </definition>
+   
+   <!-- USER Product Edit Page  -->
+   <definition name="userProductEdit" extends="userLayout">  
+       <put-attribute name="title" value="Trang sản phẩm" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/sanPhamEdit.jsp" />  
+   </definition>
+   
+   <!-- USER Receiving Page  -->
+   <definition name="userReceiving" extends="userLayout">  
+       <put-attribute name="title" value="Trang nhập kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/nhapkho/nhapKho.jsp" />  
+   </definition>
+   
+   <!-- USER Receiving Add Page  -->
+   <definition name="userReceivingAdd" extends="userLayout">  
+       <put-attribute name="title" value="Trang nhập kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/nhapkho/nhapKhoAdd.jsp" />  
+   </definition>
+   
+   <!-- USER Delivery Page  -->
+   <definition name="userDelivery" extends="userLayout">  
+       <put-attribute name="title" value="Trang xuất kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/xuatkho/xuatKho.jsp" />  
+   </definition>
+   
+   <!-- USER Delivery Add Page  -->
+   <definition name="userDeliveryAdd" extends="userLayout">  
+       <put-attribute name="title" value="Trang xuất kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/xuatkho/xuatKhoAdd.jsp" />  
+   </definition>
+   
+   <!-- USER Report Page  -->
+   <definition name="userReport" extends="userLayout">  
+       <put-attribute name="title" value="Trang xuất kho" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/baocao/baoCao.jsp" />  
+   </definition>
+   
+   <!-- USER Customer Page  -->
+   <definition name="userCustomer" extends="userLayout">  
+       <put-attribute name="title" value="Trang khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/khachhang/khachHang.jsp" />  
+   </definition>
+   
+   <!-- USER Customer Add Page  -->
+   <definition name="userCustomerAdd" extends="userLayout">  
+       <put-attribute name="title" value="Trang khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/khachhang/khachHangAdd.jsp" />  
+   </definition>
+   
+   <!-- USER Customer Edit Page  -->
+   <definition name="userCustomerEdit" extends="userLayout">  
+       <put-attribute name="title" value="Trang khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/khachhang/khachHangEdit.jsp" />  
+   </definition>
+   
+   <!-- USER Supplier Page  -->
+   <definition name="userSupplier" extends="userLayout">  
+       <put-attribute name="title" value="Trang nhà cung cấp" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/ncc/ncc.jsp" />  
+   </definition>
+   
+   <!-- USER Customer Add Page  -->
+   <definition name="userSupplierAdd" extends="userLayout">  
+       <put-attribute name="title" value="Trang nhà cung cấp" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/ncc/nccAdd.jsp" />  
+   </definition>
+   
+   <!-- USER Customer Edit Page  -->
+   <definition name="userSupplierEdit" extends="userLayout">  
+       <put-attribute name="title" value="Trang nhà cung cấp" />  
+       <put-attribute name="body" value="/WEB-INF/views/user/components/ncc/nccEdit.jsp" />  
+   </definition>
+</tiles-definitions>
